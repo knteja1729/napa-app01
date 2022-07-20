@@ -1,0 +1,60 @@
+<mat-toolbar color="primary">
+    <span><a mat-icon-button routetLink="/">NAPA App</a></span>
+    <span class="example-spacer"></span>
+    <!-- <a  mat-icon-button routerLink="/register">Rigister</a>  &nbsp;&nbsp; -->
+    <!-- <a mat-icon-button routerLink="/home">Home</a> -->
+
+   <a
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/home'"
+    mat-icon-button
+    class="example-icon favorite-icon mr20 ml20"
+    aria-label="Example icon-button with heart icon"
+  >
+    Home
+  </a>&nbsp;&nbsp;
+
+    
+    <!-- <a mat-icon-button >Logout</a> -->
+
+    <a
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/login'"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    Login
+  </a>&nbsp;&nbsp;
+
+  <a
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/register'"
+    mat-icon-button
+    class="example-icon favorite-icon mr20 ml20"
+    aria-label="Example icon-button with heart icon"
+  >
+    Register
+  </a>&nbsp;&nbsp;
+
+  <a
+    (click)="logout()" 
+    *ngIf="isLoggedIn"
+    mat-icon-button
+    class="example-icon favorite-icon mr20 ml20"
+    aria-label="Example icon-button with heart icon"
+  >
+    Logout
+  </a>
+
+   <button
+    *ngIf="isLoggedIn && user"
+    class="example-icon favorite-icon ml20"
+    mat-button
+   
+    aria-label="Example icon-button with heart icon"
+  >
+    {{ user.firstName }}
+   </button>  
+
+</mat-toolbar>

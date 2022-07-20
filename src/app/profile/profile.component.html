@@ -1,0 +1,47 @@
+<mat-card>
+    <h1 class="text-center">Your Profile Details</h1>
+    <!-- {{user | json}} -->
+    <mat-card-content>
+        <div class="bootstap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIwAjAMBIgACEQEDEQH/xAAbAAEAAwEBAQEAAAAAAAAAAAAABAUGAwIBB//EADkQAAICAQIDBAgEAwkAAAAAAAABAgMEBRESITETQVFhBiJScYGRocEjMkLRFOHwJDNEU2Jjc5Ox/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AP3EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOGTl0YsOK+yMfBd79yK7VtYjjN04207ujfdH+Zm7bZ2zc7ZSnN9ZNgXeV6RSe6xKUv9Vn7FfbqudZ1yJJeEeRCAHZ5eS+byLv8AsZ6hnZcH6uTb8ZtkcAWdGu5lf53C1eEls/mi3w9cxcjaNj7Gb9p8vmZUAb1Pdbn0yGm6pfhNRbdlPfBvp7jU4uTVlVK2mXFF/NAdgAAAAAAACn13U3jR/h6JbXSXOS/Sv3LHNyI4uNZdP9K5LxfcYq2yd1s7LHvKb3bA8gAAAe6qrLpqNMJTl4RQHgFhHRsxrnGEfJyON+nZVC4p1Nx73HnsBFAAAladnWYN/HHnB/nh4r9yKAN1RbC+qNtUuKElumdDN+jmZwWvFm/Vnzh5PwNIAAAAAAZ70nyN5VYyfLbjl9vuURN1mztdSvfhLhXw5EIAAAJGDiyy71VF7LrKW3RGnx6KsepV1R2ivm/NkD0fqUcOVu3rTn18l/TLQAAAKjV9NjKuWRjx2lHnOK/UvH3lEbR8zI5tSpy7q49Ize3uA4gAD1XOVVkbIPaUWmjcUWxuphbH8s4qSMKav0esc9Mgn1hJx+u/3AswAAAAGHzXvm5D/wB2X/pxJGoxcM7Ii/8AMk/qRwAAA0egzUsBR74za+5Yma0fNWJe42P8Kzk34PxNLya3T3XiAAABdTKanNWahfJdOLb5Gg1LMjiUNprtZcoL7mW3b5vqAAAA0vou/wCx3f8AL9kZo0/ozHbAnL2rG/ogLcAAAABlPSKns9Qc+62Kl8VyZWGq9IcXt8LtILedXrfDvMqAAJGHh25lnDWtor80n0QEcn42dl4KjGcJOrqo2Jr5MusTT8fFS4Y8U++clu/h4EqcYzi4zSkn1TW4FVHXadvXpsT8mmcr9dlJcNFPC/am9/oWMtOw3/h4fDkdKcXHoe9VMIvxUefzAy2T28rOPJVnHLvmmtzkbKyELYOFkYyi+qktym1DR1FO3E32XN1/sBTAPk2mAPhtNJpePp9NbWz4d373zMvpeK8vNrr29RPin7kbMAAAAAA+NJ9TI6xgPCyW4r8Gx7wfh5GvOOVj15NEqrVvGX08wMZiY88rIjTDq+r8F3s1ePRXjUxqqW0V82/FkbTtOeB2jm1KUpcpL2e4mgAAAAAAAAU2t4C4XlUrZr+8iu/zKTZvkubNo1xJrbffuIWm6PDGyJXWviab7NeyvH3gdtGwP4LG3mvxZ85eXkWIQAAAAAAAAA+NJrZnKVXfE7ACL70CS0n1R5dUX3AcAduxXiwqo+YHE9RhKXRbHZQiuiPQHiEFH3nsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//9k=" 
+                    alt=""
+                    class="prfile-img">
+                </div>
+                <h1 class="text-center">{{user.firstName}} {{user.lastName}}</h1>
+                <div class="row">
+                  <div class="col-md-10 offset-md-1">
+                  <table class="table text-center">
+                    <tr>
+                        <td>UserEmail</td>
+                        <td>{{user.username}}</td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>{{user.address1}}</td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>{{user.phoneNum}}</td>
+                    </tr>
+                    <tr>
+                        <td>Country</td>
+                        <td>{{user.country}}</td>
+                    </tr>
+                    <tr>
+                        <td>Role</td>
+                         <td>{{user.authorities[0].authority}}</td> 
+                    </tr>
+                  </table>
+                  <mat-card-actions class="text-center">
+                    <button mat-raised-button color="primary">Update</button>
+                    <button  mat-raised-button color="accent">SHARE</button>
+                  </mat-card-actions>
+                  </div>
+
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

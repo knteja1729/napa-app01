@@ -1,0 +1,56 @@
+<div class="bootstarp-wrapper">
+    <div class="container mt">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+            <div class="container text-center ">
+                <img class ="img-fluid text-center" style="width: 400px;" src="/assets/napalogo.png" alt="">
+            
+            <!-- <h1 class="text-center">Register Here!!!</h1> -->
+
+                <form (ngSubmit)="onSubmit()">
+                    <h3><b>Change Password Here</b></h3>
+                    
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Enter Password</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="changePwd.password"
+                        name="password"
+                        type="password" matInput/>
+                    </mat-form-field>
+                    &nbsp;&nbsp;
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>New Password</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="changePwd.newPassword"
+                        name="password"
+                        type="password" matInput/>
+                    </mat-form-field>
+                    <br>
+                    
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>ConfirmPassword</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="changePwd.confirmPassword"
+                        name="confirmPassword"
+                        type="password" matInput/>
+                    </mat-form-field>
+                    &nbsp;&nbsp;
+
+                    
+                   <br>
+                   <div class="container text-center">
+                    <button type="submit" mat-raised-button color="primary">submit</button>
+                    <button type="reset" mat-raised-button style="margin-left: 10px;" color="accent">Reset</button>
+                </div>
+
+            </form>
+            
+        </div>   
+        </div>
+        
+</div>
+</div>

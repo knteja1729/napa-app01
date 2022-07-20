@@ -1,0 +1,214 @@
+<div class="bootstarp-wrapper">
+    <div class="container mt">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+            <div class="container text-center ">
+                <img class ="img-fluid text-center" style="width: 400px;" src="/assets/napalogo.png" alt="">
+            
+            <h1 class="text-center">Update Profile Here!!!</h1>
+
+                <form (ngSubmit)="onSubmit()">
+                    <h3><b>Personal Details</b></h3>
+
+                    <!-- <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Id</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="user.id"
+                        name="id"
+                        type="text" matInput/>
+                    </mat-form-field> -->
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>FirstName</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="user.firstName"
+                        name="firstName"
+                        type="text" matInput/>
+                    </mat-form-field>
+                    &nbsp;&nbsp;
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>LastName</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="user.lastName"
+                        name="lastName"
+                        type="text" matInput/>
+                    </mat-form-field>
+                    &nbsp;&nbsp;
+                   
+                    <mat-form-field appearance="fill">
+                        <mat-label>Gender</mat-label>
+                        <select matNativeControl required
+                        [(ngModel)]="user.gender" name="gender">
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                          
+                        </select>
+                      </mat-form-field>
+                      <br>
+                      <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="user.username"
+                        name="username"
+                        type="text" matInput readonly/>
+                    </mat-form-field>
+                    &nbsp;&nbsp;
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="user.password"
+                        name="password"
+                        type="password" matInput readonly/>
+                    </mat-form-field>
+                    <br>
+                    <h3><b>Contact Details</b></h3>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>PhoneNumber</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="user.phoneNum"
+                        name="phoneNum"
+                        type="text" matInput/>
+                    </mat-form-field>
+                    &nbsp;&nbsp;
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Address1</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="user.address1"
+                        name="address1"
+                        type="text" matInput/>
+                    </mat-form-field>
+                    &nbsp;&nbsp;
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Address2</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="user.address2"
+                        name="address2"
+                        type="text" matInput/>
+                    </mat-form-field>
+                   <br>
+
+                  
+
+            <mat-form-field appearance="fill">
+                <mat-label>country</mat-label>
+                <select matNativeControl required
+                [(ngModel)]="user.country" name="country" (change)="onSelect($event.target)">
+                
+                <option value="0">--Select--</option>
+                <option *ngFor="let country of countries" value= {{country.id}}>{{country.name}}</option>
+                  
+                </select>
+              </mat-form-field>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+
+              <!-- <mat-form-field appearance="fill">
+                <mat-label>State</mat-label>
+                <select matNativeControl 
+                [(ngModel)]="user.state" name="state" >
+                <option *ngFor ="let city of cities">{{city}} </option>
+                  
+                </select>
+              </mat-form-field> -->
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>State</mat-label>
+                <input 
+                required
+                [(ngModel)]="user.state"
+                name="state"
+                type="text" matInput/>
+            </mat-form-field>
+              &nbsp;&nbsp;
+
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>City</mat-label>
+                <input 
+                required
+                [(ngModel)]="user.city"
+                name="city"
+                type="text" matInput/>
+            </mat-form-field>
+           <br>
+
+           <!-- <mat-form-field class="full-width" appearance="outline">
+            <mat-label>City</mat-label>
+            <input 
+            required
+            [(ngModel)]="user.city"
+            name="city"
+            type="text" matInput/>
+        </mat-form-field> -->
+        &nbsp;&nbsp;
+
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Referended By</mat-label>
+            <input 
+            type="text" matInput/>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Occupation</mat-label>
+            <input 
+            required
+            [(ngModel)]="user.occupation"
+            name="occupation"
+            type="text" matInput/>
+        </mat-form-field>
+        &nbsp;&nbsp;
+
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Company</mat-label>
+            <input 
+            required
+            [(ngModel)]="user.company"
+            name="company"
+            type="text" matInput/>
+        </mat-form-field>
+        &nbsp;&nbsp;
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Gotram</mat-label>
+            <input 
+            required
+            [(ngModel)]="user.gotram"
+            name="gotram"
+            type="text" matInput/>
+        </mat-form-field>
+        &nbsp;&nbsp;
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Upload Image</mat-label>
+            <input 
+            required
+            [(ngModel)]="user.image"
+            name="iamge"
+            type="text" matInput/>
+        </mat-form-field>
+
+
+
+
+
+
+
+                    <div class="container text-center">
+                        <button type="submit" mat-raised-button color="primary">submit</button>
+                        <button type="reset" mat-raised-button style="margin-left: 10px;" color="accent">Reset</button>
+                    </div>
+
+                </form>
+                
+            </div>   
+            </div>
+            
+    </div>
+</div>

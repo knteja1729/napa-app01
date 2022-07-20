@@ -1,0 +1,299 @@
+<div class="bootstarp-wrapper">
+    <div class="container mt">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+            <div class="container text-center ">
+                <img class ="img-fluid text-center" style="width: 400px;" src="/assets/napalogo.png" alt="">
+            
+            <h1 class="text-center">Add Matrimony Profile</h1>
+
+                <form (ngSubmit)="onSubmit()">
+                    <h3><b>UserDetails</b></h3>
+
+                    <!-- <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Id</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="user.id"
+                        name="id"
+                        type="text" matInput/>
+                    </mat-form-field> -->
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>FirstName</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="matrimony.firstName"
+                        name="firstName"
+                        type="text" matInput/>
+                    </mat-form-field>
+                    &nbsp;&nbsp;
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>LastName</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="matrimony.lastName"
+                        name="lastName"
+                        type="text" matInput/>
+                    </mat-form-field>
+                    
+                   
+                    <mat-form-field appearance="fill">
+                        <mat-label>Gender</mat-label>
+                        <select matNativeControl required
+                        [(ngModel)]="matrimony.gender" name="gender">
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                          
+                        </select>
+                      </mat-form-field>
+                      <br>
+
+                      <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>ContactNumber</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="matrimony.contactNo"
+                        name="conatactNo"
+                        type="text" matInput/>
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Native Language</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="matrimony.nativeLanguage"
+                        name="nativeLanguage"
+                        type="text" matInput/>
+                    </mat-form-field>
+
+                      <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>EmailId</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="matrimony.email"
+                        name="email"
+                        type="text" matInput/>
+                    </mat-form-field>
+                    <br>
+                   
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Age</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="matrimony.age"
+                        name="age"
+                        type="text" matInput/>
+                    </mat-form-field>
+                   
+                    
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Cast</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="matrimony.caste"
+                        name="caste"
+                        type="text" matInput/>
+                    </mat-form-field>
+                    &nbsp;&nbsp;
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Creating For</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="matrimony.createProfileFor"
+                        name="createProfileFor"
+                        type="text" matInput/>
+                    </mat-form-field>
+                  <br>
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Color</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="matrimony.color"
+                        name="color"
+                        type="text" matInput/>
+                    </mat-form-field>
+                
+                <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Height</mat-label>
+                <input 
+                required
+                [(ngModel)]="matrimony.height"
+                name="height"
+                type="text" matInput/>
+            </mat-form-field>
+              &nbsp;&nbsp;
+
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Anual Income</mat-label>
+                <input 
+                required
+                [(ngModel)]="matrimony.anualIncome"
+                name="anualIncome"
+                type="text" matInput/>
+            </mat-form-field>
+           <br>
+
+        &nbsp;&nbsp;
+
+        
+        <br>
+
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Qualification</mat-label>
+            <input 
+            required
+            [(ngModel)]="matrimony.qualification"
+            name="qualification"
+            type="text" matInput/>
+        </mat-form-field>
+        &nbsp;&nbsp;
+
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Gothram</mat-label>
+            <input 
+            required
+            [(ngModel)]="matrimony.gothram"
+            name="gothram"
+            type="text" matInput/>
+        </mat-form-field>
+        &nbsp;&nbsp;
+
+        <mat-form-field appearance="fill">
+            <mat-label>Looking For</mat-label>
+            <select matNativeControl required
+            [(ngModel)]="matrimony.lookingFor" name="lookingFor">
+              <option value="Bride">Bride</option>
+              <option value="Groom">Groom</option>
+              
+            </select>
+          </mat-form-field>
+          <br>
+
+          <h3><b>Candidate Address</b></h3>
+        
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Place Of Origin</mat-label>
+            <input 
+            required
+            [(ngModel)]="matrimony.placeOfOrigin"
+            name="gotram"
+            type="text" matInput/>
+        </mat-form-field>
+        &nbsp;&nbsp;
+
+        
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Permament Address</mat-label>
+            <input 
+            required
+            [(ngModel)]="matrimony.permanentAddress"
+            name="permanentAddress"
+            type="text" matInput/>
+        </mat-form-field>
+        <br>
+
+       
+
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Country</mat-label>
+            <input 
+            required
+            [(ngModel)]="matrimony.country"
+            name="country"
+            type="text" matInput/>
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>State</mat-label>
+            <input 
+            required
+            [(ngModel)]="matrimony.state"
+            name="state"
+            type="text" matInput/>
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>City</mat-label>
+            <input 
+            required
+            [(ngModel)]="matrimony.city"
+            name="city"
+            type="text" matInput/>
+        </mat-form-field>
+        <br>
+        <h3><b>Preferences</b></h3>
+
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Color</mat-label>
+            <input 
+            required
+            [(ngModel)]="matrimony.preferColor"
+            name="preferColor"
+            type="text" matInput/>
+        </mat-form-field>
+
+        
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Height</mat-label>
+            <input 
+            required
+            [(ngModel)]="matrimony.preferHeight"
+            name="preferHeight"
+            type="text" matInput/>
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Prefer Anual Income</mat-label>
+            <input 
+            required
+            [(ngModel)]="matrimony.preferAnualIncome"
+            name="preferAnualIncome"
+            type="text" matInput/>
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Qualification</mat-label>
+            <input 
+            required
+            [(ngModel)]="matrimony.preferQualification"
+            name="preferQualification"
+            type="text" matInput/>
+        </mat-form-field>
+
+        
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Other specifications</mat-label>
+            <input 
+            required
+            [(ngModel)]="matrimony.preferOtherSpec"
+            name="preferOtherSpec"
+            type="text" matInput/>
+        </mat-form-field>
+
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>photo</mat-label>
+            <input 
+            required
+            [(ngModel)]="matrimony.photo"
+            name="photo"
+            type="text" matInput/>
+        </mat-form-field>
+        
+        <div class="container text-center">
+                        <button type="submit" mat-raised-button color="primary">submit</button>
+                        <button type="reset" mat-raised-button style="margin-left: 10px;" color="accent">Reset</button>
+                    </div>
+
+                </form>
+                
+            </div>   
+            </div>
+            
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.prfile-img{
+    max-width: 200px;
+    max-height:200px;
+    border: 2px greenyellow;
+    border-radius: 50%;
+}
+
+.table{
+    width: 100%;
+    border: 0.5px solid white;
+}
+
+.table tr td{
+    padding: 10px 20px;
+    border: 0.5px solid white;
+}
